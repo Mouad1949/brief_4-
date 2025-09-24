@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
   return (
     <div>
-      <footer className="bg-[#0C0C0C] mt-12">
+      <footer className="bg-[#0C0C0C] fixed bottom-0 left-0 w-full">
   <div className="max-w-screen mx-auto px-4 py-12 sm:px-6 lg:px-8">
     {/* Use grid with 3 columns */}
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">
