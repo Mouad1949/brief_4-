@@ -1,3 +1,4 @@
+
 import React from "react";
 import ComponentBanner from "../Components/ComponentBanner";
 import ComponentBanner from "../Components/BlocRecherche";
@@ -11,3 +12,4 @@ export default function Accueil() {
     </div>
   );
 }
+

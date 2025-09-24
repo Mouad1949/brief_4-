@@ -6,7 +6,11 @@ import Publier from "./pages/Publier";
 import Favoris from "./pages/Favoris";
 import APropos from "./pages/APropos";
 import AdminDashboard from "./Pages/Admin";
+<<<<<<< HEAD
 import Footer from "./Components/layout/Footer";
+=======
+import Footer from './Components/layout/Footer';
+>>>>>>> b47db11dc7e3cf4417979a078b9fb5c17d65ce4c
 
 export default function App() {
   return (
@@ -29,6 +33,7 @@ export default function App() {
 
 );
 }
+
 
 
 
