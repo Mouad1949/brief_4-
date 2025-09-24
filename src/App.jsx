@@ -10,19 +10,24 @@ import Footer from './Components/layout/Footer';
 
 export default function App() {
   return (
-    <Router>
-      <Navbar />
-      <main className="container mx-auto px-4 py-6">
-        <Routes>
-          <Route path="/" element={<Accueil />} />
-          <Route path="/publier" element={<Publier />} />
-          <Route path="/favoris" element={<Favoris />} />
-          <Route path="/a-propos" element={<APropos />} />
-          <Route path="/admin" element={<AdminDashboard />} />
-        </Routes>
-      </main>
-    </Router>
-  );
+
+    <>
+      <Router>
+        <Navbar />
+        <main className="container mx-auto px-4 py-6">
+          <Routes>
+            <Route path="/" element={<Accueil />} />
+            <Route path="/publier" element={<Publier />} />
+            <Route path="/favoris" element={<Favoris />} />
+            <Route path="/a-propos" element={<APropos />} />
+            <Route path="/admin" element={<AdminDashboard />} />
+          </Routes>
+        </main>
+      </Router>
+      <Footer />
+    </>
+
+);
 }
 
 
