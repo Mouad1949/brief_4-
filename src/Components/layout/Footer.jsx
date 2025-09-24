@@ -3,11 +3,8 @@ import React from 'react'
 function Footer() {
   return (
     <div>
-<<<<<<< HEAD
-      <footer className="bg-[#0C0C0C] ">
-=======
-      <footer className="bg-[#0C0C0C]">
->>>>>>> b47db11dc7e3cf4417979a078b9fb5c17d65ce4c
+
+<footer className="bg-[#0C0C0C] ">
   <div className="max-w-screen mx-auto px-4 py-12 sm:px-6 lg:px-8">
     {/* Use grid with 3 columns */}
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">

@@ -9,7 +9,7 @@ export default function BlocRecherche() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto mt-16 p-6 rounded-lg shadow-md bg-white">
+    <div className="max-w-3xl mx-auto p-6 mb-16 rounded-lg shadow-md bg-white">
       <h2 className="text-xl font-bold mb-6 text-[#F2613F]">
         Rechercher une œuvre
       </h2>

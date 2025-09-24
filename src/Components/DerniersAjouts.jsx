@@ -15,7 +15,8 @@ const derniersAjouts = [
 
 export default function DerniersAjouts() {
   return (
-    <section className="bg-[#0C0C0C] p-6 rounded-lg">
+    <div className="">
+      <section className="bg-[#0C0C0C] p-8 rounded-lg">
       <h2 className="text-2xl font-bold text-[#F2613F] mb-4">
         Derniers ajouts
       </h2>
@@ -40,5 +41,6 @@ export default function DerniersAjouts() {
         ))}
       </div>
     </section>
+    </div>
   );
 }
