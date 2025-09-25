@@ -31,9 +31,7 @@ function ComponentBanner() {
           />
         </div>
       </div>
-</section>
-
-
+    </section>
     </div>
   )
 }
