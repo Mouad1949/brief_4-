@@ -1,26 +1,28 @@
-import React from 'react'
-import even1 from '../assets/even1.jpg'
-import even2 from '../assets/evn2.jpg'
-import even3 from '../assets/even3.jpg'
-import even4 from '../assets/even4.jpg'
+import React from "react";
+import tapis from "../../assets/tapis.jpeg";
+import pottery from "../../assets/pottery.jpeg";
+import platre from "../../assets/platre.jpg";
+import bois from "../../assets/bois.jpeg";
+import calligraphie from "../../assets/calligraphie.jpg";
 
-const evenements = [
-  { id: 1, titre: "evenements Fès", image: even1 },
-  { id: 2, titre: "evenements Rabat", image: even2 },
-  { id: 3, titre: "evenements Casablanca", image: even3 },
-  { id: 4, titre: "evenements Marrakech", image:even4 },
-  { id: 5, titre: "evenements Marrakech", image:even4 }
+const derniersAjouts = [
+  { id: 1, titre: "Tapis berbère", image: tapis },
+  { id: 2, titre: "Pottery de Fès", image: pottery },
+  { id: 3, titre: "Plâtre sculpté", image: platre },
+  { id: 4, titre: "Bois sculpté", image:bois  },
+  { id: 5, titre: "Calligraphie arabe", image: calligraphie },
 ];
-function Evenements() {
+
+export default function DerniersAjouts() {
   return (
-    <div>
+    <div className="">
       <section className="border-2 border-[#F2613F] p-6 rounded-lg">
       <h2 className="text-2xl font-bold text-[#F2613F] mb-4">
-        Les Événements
+        Derniers ajouts
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-        {evenements.map((item) => (
+        {derniersAjouts.map((item) => (
           <div
             key={item.id}
             className="rounded-lg overflow-hidden shadow hover:scale-105 transition-transform duration-300"
@@ -46,7 +48,5 @@ function Evenements() {
       </div>
     </section>
     </div>
-  )
+  );
 }
-
-export default Evenements

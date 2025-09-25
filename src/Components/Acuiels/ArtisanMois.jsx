@@ -1,9 +1,9 @@
 import React from 'react'
-import artisan1 from '../assets/artisan1.jpg';
-import artisan2 from '../assets/artisan2.jpg';
-import artisan3 from '../assets/artisan3.jpg';
-import artisan4 from '../assets/artisan4.jpg';
-import artisan5 from '../assets/artisan5.jpg';
+import artisan1 from '../../assets/artisan1.jpg';
+import artisan2 from '../../assets/artisan2.jpg';
+import artisan3 from '../../assets/artisan3.jpg';
+import artisan4 from '../../assets/artisan4.jpg';
+import artisan5 from '../../assets/artisan5.jpg';
 
 const artisans = [
   { id: 1, titre: "evenements Fès", image: artisan1 },

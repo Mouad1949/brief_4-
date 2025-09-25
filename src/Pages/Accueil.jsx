@@ -1,12 +1,12 @@
 
 import React from "react";
-import ComponentBanner from "../Components/ComponentBanner";
-import BlocRecherche from "../Components/BlocRecherche";
-import DerniersAjouts from "../Components/DerniersAjouts";
-import Categories from "../Components/Categories";
-import Oeuvres from "../Components/Oeuvres";
-import Evenements from "../Components/Evenements";
-import ArtisanMois from "../Components/ArtisanMois";
+import ComponentBanner from "../Components/Acuiels/ComponentBanner";
+import BlocRecherche from "../Components/Acuiels/BlocRecherche";
+import DerniersAjouts from "../Components/Acuiels/DerniersAjouts";
+import Categories from "../Components/Acuiels/Categories";
+import Oeuvres from "../Components/Acuiels/Oeuvres";
+import Evenements from "../Components/Acuiels/Evenements";
+import ArtisanMois from "../Components/Acuiels/ArtisanMois";
 
 export default function Accueil() {
   return (
