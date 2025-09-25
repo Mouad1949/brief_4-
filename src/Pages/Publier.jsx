@@ -1,9 +1,17 @@
 import React from "react";
+import Navbar from "../Components/layout/Navbar";
+import Footer from "../Components/layout/Footer";
+import FormPublier from "../Components/FormPublier";
+
 export default function Publier() {
   return (
-    <div>
-      <h1 className="text-2xl font-bold text-[#F2613F] mb-4">Publier une œuvre</h1>
-      <p>(Ici vous mettrez le formulaire de publication)</p>
+    <div className="min-h-screen bg-white flex flex-col">
+
+      <main className="flex-grow flex justify-center items-center p-6">
+        <FormPublier />
+      </main>
+     
     </div>
   );
 }
+
