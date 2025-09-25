@@ -16,7 +16,7 @@ function ComponentFavoris() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <h2 className="text-2xl font-semibold text-[#9B3922] mb-6">
-        Dernières Œuvres
+        Les Favoris
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
