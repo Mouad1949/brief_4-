@@ -37,7 +37,7 @@ function Evenements() {
               
             </div>
             <div className='m-4'>
-              <button className="inline-block rounded bg-[#9B3922] px-6 py-3 font-medium text-white shadow hover:bg-transparent hover:text-[#9B3922] border border-[#9B3922] transition">Ajouter des favoris</button>
+              <button className="inline-block cursor-pointer rounded bg-[#9B3922] px-6 py-3 font-medium text-white shadow hover:bg-transparent hover:text-[#9B3922] border border-[#9B3922] transition">Ajouter des favoris</button>
             </div>
           </div>
           

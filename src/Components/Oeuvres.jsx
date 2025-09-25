@@ -27,35 +27,47 @@ export default function Oeuvres() {
       image: "/src/assets/pottery.jpeg",
       region: "Safi, Maroc",
     },
+    {
+      id: 5,
+      titre: "Poterie artisanale",
+      image: "/src/assets/pottery.jpeg",
+      region: "Safi, Maroc",
+    }
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      <h2 className="text-2xl font-semibold text-[#9B3922] mb-6">
+    <div className="">
+    <section className="border-2 border-[#F2613F] p-6 rounded-lg">
+      <h2 className="text-2xl font-bold text-[#F2613F] mb-4">
         Dernières Œuvres
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {oeuvres.map((oeuvre) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        {oeuvres.map((item) => (
           <div
-            key={oeuvre.id}
-            className="bg-[#481E14] rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition cursor-pointer"
+            key={item.id}
+            className="rounded-lg overflow-hidden shadow hover:scale-105 transition-transform duration-300"
           >
-            {/* Image */}
             <img
-              src={oeuvre.image}
-              alt={oeuvre.titre}
-              className="w-full h-48 object-cover"
+              src={item.image}
+              alt={item.titre}
+              className="w-full h-32 object-cover"
             />
-
-            {/* Contenu */}
-            <div className="p-4 text-white">
-              <h3 className="text-lg font-bold">{oeuvre.titre}</h3>
-              <p className="text-sm text-gray-300">{oeuvre.region}</p>
+            <div className="p-2">
+              <h3 className="text-[#9B3922] font-semibold m-4">
+                {item.titre}
+              </h3>
+              
+            </div>
+            <div className='m-4'>
+              <button className="inline-block cursor-pointer rounded bg-[#9B3922] px-6 py-3 font-medium text-white shadow hover:bg-transparent hover:text-[#9B3922] border border-[#9B3922] transition">Ajouter des favoris</button>
             </div>
           </div>
+          
         ))}
+        
       </div>
+    </section>
     </div>
   );
 }

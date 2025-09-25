@@ -47,7 +47,7 @@ export default function BlocRecherche() {
         {/* Bouton */}
         <button
           onClick={handleRecherche}
-          className="px-6 py-2 rounded text-white font-medium transition duration-200"
+          className="px-6 py-2 cursor-pointer rounded text-white font-medium transition duration-200"
           style={{ backgroundColor: "#9B3922" }}
         >
           Rechercher
