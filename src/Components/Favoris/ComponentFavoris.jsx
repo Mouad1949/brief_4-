@@ -16,29 +16,29 @@ function ComponentFavoris() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <h2 className="text-2xl font-semibold text-[#9B3922] mb-6">
-        Dernières Œuvres
+        Les Favoris
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {favoris.map((oeuvre) => (
+        {favoris.map((item) => (
           <div
-            key={oeuvre.id}
-            className="rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition cursor-pointer"
+            key={item.id}
+            className="rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition "
           >
             {/* Image */}
             <img
-              src={oeuvre.image}
-              alt={oeuvre.titre}
+              src={item.image}
+              alt={item.titre}
               className="w-full h-48 object-cover"
             />
 
             {/* Contenu */}
             <div className="p-4 text-white">
-              <h3 className="text-lg font-bold">{oeuvre.titre}</h3>
-              <p className="text-sm text-gray-300">{oeuvre.region}</p>
+              <h3 className="text-lg font-bold">{item.titre}</h3>
+              <p className="text-sm text-gray-300">{item.region}</p>
             </div>
             <div className='m-4'>
-              <button className="inline-block rounded bg-[#9B3922] px-6 py-3 font-medium text-white shadow hover:bg-transparent hover:text-[#9B3922] border border-[#9B3922] transition">Retirer des favoris</button>
+              <button className="inline-block  cursor-pointer rounded bg-[#9B3922] px-6 py-3 font-medium text-white shadow hover:bg-transparent hover:text-[#9B3922] border border-[#9B3922] transition">Retirer des favoris</button>
             </div>
           </div>
           
