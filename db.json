@@ -1,0 +1,78 @@
+{
+  "categories": [
+    { "id": 1, "name": "Artisanat" },
+    { "id": 2, "name": "Gastronomie" },
+    { "id": 3, "name": "Habits" },
+    { "id": 4, "name": "Architecture" },
+    { "id": 5, "name": "Musique & Danse" }
+  ],
+
+  "oeuvres": [
+    {
+      "id": 1,
+      "titre": "Tapis berbère",
+      "categorieId": 1,
+      "region": "Marrakech",
+      "image": "https://res.cloudinary.com/demo/image/upload/tapis.jpg"
+    },
+    {
+      "id": 2,
+      "titre": "Couscous traditionnel",
+      "categorieId": 2,
+      "region": "Fès",
+      "image": "https://res.cloudinary.com/demo/image/upload/couscous.jpg"
+    },
+    {
+      "id": 3,
+      "titre": "Caftan marocain",
+      "categorieId": 3,
+      "region": "Casablanca",
+      "image": "https://res.cloudinary.com/demo/image/upload/caftan.jpg"
+    },
+    {
+      "id": 4,
+      "titre": "Mosquée Hassan II",
+      "categorieId": 4,
+      "region": "Casablanca",
+      "image": "https://res.cloudinary.com/demo/image/upload/hassan2.jpg"
+    },
+    {
+      "id": 5,
+      "titre": "Ahidous",
+      "categorieId": 5,
+      "region": "Moyen Atlas",
+      "image": "https://res.cloudinary.com/demo/image/upload/ahidous.jpg"
+    }
+  ],
+
+  "artisans": [
+    { "id": 1, "nom": "Ahmed", "specialite": "Poterie", "ville": "Saf i" },
+    { "id": 2, "nom": "Fatima", "specialite": "Broderie", "ville": "Fès" },
+    { "id": 3, "nom": "Youssef", "specialite": "Menuiserie", "ville": "Meknès" }
+  ],
+
+  "evenements": [
+    {
+      "id": 1,
+      "nom": "Festival Gnaoua",
+      "lieu": "Essaouira",
+      "date": "2025-06-15"
+    },
+    {
+      "id": 2,
+      "nom": "Moussem Tan-Tan",
+      "lieu": "Tan-Tan",
+      "date": "2025-07-10"
+    }
+  ],
+
+  "favoris": [
+    { "id": 1, "userId": 1, "oeuvreId": 1 },
+    { "id": 2, "userId": 1, "oeuvreId": 3 }
+  ],
+
+  "users": [
+    { "id": 1, "nom": "Utilisateur Test", "role": "user" },
+    { "id": 2, "nom": "Admin", "role": "admin" }
+  ]
+}
