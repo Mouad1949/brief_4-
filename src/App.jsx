@@ -11,10 +11,10 @@ import Footer from "./Components/layout/Footer";
 
 export default function App() {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Router>
         <Navbar />
-        <main className="container mx-auto px-4 py-6">
+        <main className="container mx-auto px-4 py-6 flex-grow">
           <Routes>
             <Route path="/" element={<Accueil />} />
             <Route path="/publier" element={<Publier />} />
@@ -25,6 +25,6 @@ export default function App() {
         </main>
       </Router>
       <Footer />
-    </>
+    </div>
   );
 }
