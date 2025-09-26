@@ -1,5 +1,9 @@
 import React from "react";
 import ComponentButton from "../Components/Admin/ComponentButton";
+import AddForm from "../Components/Admin/AddForm";
+import SearchForm from "../Components/Admin/SearchForm";
+import CardItem from "../Components/Admin/CardItem";
+import ComponentModification from "../Components/Admin/ComponentModification";
 export default function Admin() {
   return (
     <div>
@@ -8,6 +12,15 @@ export default function Admin() {
       <div className="p-4">
           <ComponentButton />
       </div>
+      <div className="p-4">
+          <AddForm />
+      </div>
+      <div className="p-4">
+          <ComponentModification />
+      </div>
+      {/* <div className="p-4">
+          <CardItem />
+      </div> */}
     </div>
   );
 }

@@ -1,6 +1,4 @@
 import React from "react";
-import Navbar from "../Components/layout/Navbar";
-import Footer from "../Components/layout/Footer";
 import ChiffresCles from "../Components/APropos/ChiffresCles";
 import Timeline from "../Components/APropos/Timeline";
 
