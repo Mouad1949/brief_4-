@@ -1,5 +1,4 @@
 import React from "react";
-import ComponentButton from "../Components/Admin/ComponentButton";
 import AddForm from "../Components/Admin/AddForm";
 import SearchForm from "../Components/Admin/SearchForm";
 import CardItem from "../Components/Admin/CardItem";
@@ -9,9 +8,6 @@ export default function Admin() {
     <div>
       <h1 className="text-2xl font-bold text-[#F2613F] mb-4">Tableau de bord Admin</h1>
       <p>Gestion des œuvres — créez, modifiez et organisez les contenus</p>
-      <div className="p-4">
-          <ComponentButton />
-      </div>
       <div className="p-4">
           <AddForm />
       </div>
