@@ -1,72 +1,80 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import InputText from "./InputText";
-import Select from "./Select";
 import FileUpload from "./FileUpload";
 import Button from "./Button";
+import axios from "axios";
+import { OeuvresContext } from "../../Context/OeuvresProvider";
+import { CategorieContext } from "../../Context/CategorieProvider";
+import { useRef } from "react";
 
 export default function FormPublier() {
-  const [titre, setTitre] = useState("");
-  const [categorie, setCategorie] = useState("");
+  const [nom, setNom] = useState("");
+  const [category, setCategorie] = useState("");
   const [region, setRegion] = useState("");
   const [image, setImage] = useState(null);
   const [message, setMessage] = useState("");
 
-  const categories = ["Peinture", "Sculpture", "Tapis", "Plâtre", "Calligraphie"];
+  const {addOeuvre} = useContext(OeuvresContext);
 
-  // Fonction pour uploader l'image (Cloudinary)
-  const handleImageUpload = async (file) => {
-    const formData = new FormData();
-    formData.append("file", file);
-    formData.append("upload_preset", "TON_UPLOAD_PRESET"); 
-    try {
-      const res = await fetch("https://api.cloudinary.com/v1_1/TON_CLOUD_NAME/image/upload", {
-        method: "POST",
-        body: formData,
-      });
-      const data = await res.json();
-      return data.secure_url;
-    } catch (error) {
-      console.error("Erreur upload image :", error);
-      return null;
-    }
-  };
-
+  const {categories} = useContext(CategorieContext);
+  
+  const fileInputRef = useRef(null)
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!titre || !categorie || !region || !image) {
+    if (!nom || !category || !region || !image) {
       setMessage("Tous les champs sont obligatoires !");
       return;
     }
 
-    const imageUrl = await handleImageUpload(image);
-    if (!imageUrl) {
-      setMessage("Erreur lors de l'upload de l'image !");
-      return;
-    }
+    let imageUrl = "";
+      if (image) {
+        const formData = new FormData();
+        formData.append("file", image);
+        formData.append("upload_preset", "brief_React"); 
 
-    console.log({ titre, categorie, region, imageUrl });
+        try{
+          const res = await axios.post(
+            "https://api.cloudinary.com/v1_1/dh8xcvzyi/image/upload",
+            formData
+          );
+          imageUrl = res.data.secure_url;
+        } catch (err) {
+          console.error("Erreur upload:", err);
+          alert("Erreur lors de l’upload de l’image");
+          return;
+        }
+      }
+
+    addOeuvre({ nom, category, region, image: imageUrl });
     setMessage("Publication réussie !");
 
-    setTitre("");
+    setNom("");
     setCategorie("");
     setRegion("");
+    fileInputRef.current.value = "";
     setImage(null);
   };
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
       <InputText
-        value={titre}
-        onChange={(e) => setTitre(e.target.value)}
-        placeholder="Titre de l'œuvre"
+        value={nom}
+        onChange={(e) => setNom(e.target.value)}
+        placeholder="Nom de l'œuvre"
       />
 
-      <Select
-        value={categorie}
+      <select value={category} className="p-2 rounded border border-[#481E14] text-black"
         onChange={(e) => setCategorie(e.target.value)}
-        options={categories}
-        placeholder="Sélectionner une catégorie"
-      />
+      >
+        <option value="">Sélectionner une catégorie</option>
+        {categories.map(item => (
+          <option key={item.id} value={item.nom}>
+            {item.nom}
+          </option>
+        ))}
+      </select>
+
 
       <InputText
         value={region}
@@ -74,9 +82,13 @@ export default function FormPublier() {
         placeholder="Région"
       />
 
-      <FileUpload onChange={setImage} />
+      <FileUpload onChange={setImage} ref={fileInputRef} />
 
-      <Button type="submit">Publier</Button>
+      <button
+      type='submit'
+      className="bg-[#9B3922] hover:bg-[#F2613F] transition-colors p-2 rounded font-bold text-white">
+      puplier
+      </button>
 
       {message && <p className="text-center text-[#F2613F]">{message}</p>}
     </form>

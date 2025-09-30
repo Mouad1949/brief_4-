@@ -1,20 +1,22 @@
-
 import React, { useContext } from "react";
 import { OeuvresContext } from "../../Context/OeuvresProvider";
+import { FavorisContext } from "../../Context/FavorisProvider";
+// import axios from "axios";
 
 export default function Oeuvres() {
-  const {oeuvres} = useContext(OeuvresContext);
+  const { oeuvres } = useContext(OeuvresContext);
+  const { AddFavoris } = useContext(FavorisContext);
 
   return (
     <div className="">
-    <section className="border-2 border-[#F2613F] p-6 rounded-lg">
-      <h2 className="text-2xl font-bold text-[#F2613F] mb-4">
-        Dernières Œuvres
-      </h2>
+      <section className="border-2 border-[#F2613F] p-6 rounded-lg">
+        <h2 className="text-2xl font-bold text-[#F2613F] mb-4">
+          Dernières Œuvres
+        </h2>
 
-      {
-        oeuvres.length === 0 ? (<p>Aucune œuvre trouvée...</p>) :
-        (
+        {oeuvres.length === 0 ? (
+          <p>Aucune œuvre trouvée...</p>
+        ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {oeuvres.map((item) => (
               <div
@@ -23,24 +25,29 @@ export default function Oeuvres() {
               >
                 <img
                   src={item.image}
-                  alt={item.titre}
+                  alt={item.nom}
                   className="w-full h-32 object-cover"
                 />
                 <div className="p-2">
                   <h3 className="text-[#9B3922] font-semibold m-4">
-                    {item.titre}
+                    {item.nom}
                   </h3>
-                  
                 </div>
-                <div className='m-4'>
-                  <button className="inline-block cursor-pointer rounded bg-[#9B3922] px-6 py-3 font-medium text-white shadow hover:bg-transparent hover:text-[#9B3922] border border-[#9B3922] transition">Ajouter des favoris</button>
+                <div className="m-4">
+                  <button
+                    onClick={() => {
+                      AddFavoris(item);
+                    }}
+                    className="inline-block cursor-pointer rounded bg-[#9B3922] px-6 py-3 font-medium text-white shadow hover:bg-transparent hover:text-[#9B3922] border border-[#9B3922] transition"
+                  >
+                    Ajouter des favoris
+                  </button>
                 </div>
               </div>
-              ))}
+            ))}
           </div>
-        )
-      }
-    </section>
+        )}
+      </section>
     </div>
   );
 }

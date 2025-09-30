@@ -1,78 +1,220 @@
 {
   "categories": [
-    { "id": 1, "name": "Artisanat" },
-    { "id": 2, "name": "Gastronomie" },
-    { "id": 3, "name": "Habits" },
-    { "id": 4, "name": "Architecture" },
-    { "id": 5, "name": "Musique & Danse" }
+    {
+      "id": "1",
+      "nom": "Artisanat"
+    },
+    {
+      "id": "2",
+      "nom": "Gastronomie"
+    },
+    {
+      "id": "3",
+      "nom": "Habits"
+    },
+    {
+      "id": "4",
+      "nom": "Architecture"
+    },
+    {
+      "id": "5",
+      "nom": "Musique & Danse"
+    }
   ],
-
   "oeuvres": [
     {
-      "id": 1,
+      "id": "866b",
+      "nom": "ew",
+      "category": "efd",
+      "region": "fe",
+      "description": "efe",
+      "image": "https://res.cloudinary.com/dh8xcvzyi/image/upload/v1759093678/xq96y40brfpeijtdnmmf.png"
+    },
+    {
+      "id": "04e7",
+      "nom": "ttx",
+      "category": "wdfef",
+      "region": "sdsz",
+      "description": "aedfc",
+      "image": "https://res.cloudinary.com/dh8xcvzyi/image/upload/v1759137983/gfjvoozzdkgfgf01eyta.jpg"
+    },
+    {
+      "id": "3072",
+      "nom": "df",
+      "category": "1",
+      "region": "srfv",
+      "image": "https://res.cloudinary.com/dh8xcvzyi/image/upload/v1759182192/xr4ibsdcszlhebcz4qyy.jpg"
+    },
+    {
+      "id": "4ada",
+      "nom": "adec",
+      "category": "Habits",
+      "region": "ased",
+      "image": "https://res.cloudinary.com/dh8xcvzyi/image/upload/v1759182550/hyrqclssrc5dqpx7ttix.jpg"
+    },
+    {
+      "id": "1b7c",
+      "nom": "adec",
+      "category": "Habits",
+      "region": "ased",
+      "image": "https://res.cloudinary.com/dh8xcvzyi/image/upload/v1759182618/o44e2tnmx2weexa6taw1.jpg"
+    },
+    {
+      "id": "edbb",
+      "nom": "adec",
+      "category": "Habits",
+      "region": "ased",
+      "image": "https://res.cloudinary.com/dh8xcvzyi/image/upload/v1759182633/sqsyve5q6e5vsorhmk0g.jpg"
+    },
+    {
+      "id": "18f3",
+      "nom": "adec",
+      "category": "Habits",
+      "region": "ased",
+      "image": "https://res.cloudinary.com/dh8xcvzyi/image/upload/v1759182642/whleuch7qwkidcm1y3zp.jpg"
+    },
+    {
+      "id": "97af",
+      "nom": "adec",
+      "category": "Habits",
+      "region": "ased",
+      "image": "https://res.cloudinary.com/dh8xcvzyi/image/upload/v1759182659/wxc2bplxznvnkntjq1nj.jpg"
+    },
+    {
+      "id": "695a",
+      "nom": "dsf",
+      "category": "Artisanat",
+      "region": "sdf",
+      "image": "https://res.cloudinary.com/dh8xcvzyi/image/upload/v1759182682/wvremttzzfhjruvzmnrh.jpg"
+    },
+    {
+      "id": "9f39",
+      "nom": "dsf",
+      "category": "Artisanat",
+      "region": "sdf",
+      "image": "https://res.cloudinary.com/dh8xcvzyi/image/upload/v1759182687/n2aafjjsxfvidng1wcnp.jpg"
+    },
+    {
+      "id": "50a6",
+      "nom": "hg",
+      "category": "Musique & Danse",
+      "region": "fg",
+      "image": "https://res.cloudinary.com/dh8xcvzyi/image/upload/v1759182787/cbtfowapildxwziajds5.jpg"
+    }
+  ],
+  "artisans": [
+    {
+      "id": "1",
+      "nom": "Ahmed",
+      "image": "https://res.cloudinary.com/demo/image/upload/tapis.jpg",
+      "specialite": "Poterie",
+      "ville": "Saf i"
+    },
+    {
+      "id": "2",
+      "nom": "Fatima",
+      "image": "https://res.cloudinary.com/demo/image/upload/tapis.jpg",
+      "specialite": "Broderie",
+      "ville": "Fès"
+    },
+    {
+      "id": "3",
+      "nom": "Youssef",
+      "image": "https://res.cloudinary.com/demo/image/upload/tapis.jpg",
+      "specialite": "Menuiserie",
+      "ville": "Meknès"
+    }
+  ],
+  "evenements": [
+    {
+      "id": "1",
+      "nom": "Festival Gnaoua",
+      "image": "https://res.cloudinary.com/demo/image/upload/tapis.jpg",
+      "lieu": "Essaouira",
+      "date": "2025-06-15"
+    },
+    {
+      "id": "2",
+      "nom": "Moussem Tan-Tan",
+      "image": "https://res.cloudinary.com/demo/image/upload/tapis.jpg",
+      "lieu": "Tan-Tan",
+      "date": "2025-07-10"
+    }
+  ],
+  "favoris": [
+    {
+      "id": "1",
+      "userId": 1,
+      "oeuvreId": 1
+    },
+    {
+      "id": "2",
+      "userId": 1,
+      "oeuvreId": 3
+    },
+    {
+      "id": "1",
       "titre": "Tapis berbère",
       "categorieId": 1,
       "region": "Marrakech",
       "image": "https://res.cloudinary.com/demo/image/upload/tapis.jpg"
     },
     {
-      "id": 2,
-      "titre": "Couscous traditionnel",
-      "categorieId": 2,
-      "region": "Fès",
-      "image": "https://res.cloudinary.com/demo/image/upload/couscous.jpg"
+      "id": "1",
+      "titre": "Tapis berbère",
+      "categorieId": 1,
+      "region": "Marrakech",
+      "image": "https://res.cloudinary.com/demo/image/upload/tapis.jpg"
     },
     {
-      "id": 3,
-      "titre": "Caftan marocain",
-      "categorieId": 3,
-      "region": "Casablanca",
-      "image": "https://res.cloudinary.com/demo/image/upload/caftan.jpg"
-    },
-    {
-      "id": 4,
+      "id": "4",
       "titre": "Mosquée Hassan II",
       "categorieId": 4,
       "region": "Casablanca",
       "image": "https://res.cloudinary.com/demo/image/upload/hassan2.jpg"
     },
     {
-      "id": 5,
-      "titre": "Ahidous",
-      "categorieId": 5,
-      "region": "Moyen Atlas",
-      "image": "https://res.cloudinary.com/demo/image/upload/ahidous.jpg"
-    }
-  ],
-
-  "artisans": [
-    { "id": 1, "nom": "Ahmed", "specialite": "Poterie", "ville": "Saf i" },
-    { "id": 2, "nom": "Fatima", "specialite": "Broderie", "ville": "Fès" },
-    { "id": 3, "nom": "Youssef", "specialite": "Menuiserie", "ville": "Meknès" }
-  ],
-
-  "evenements": [
-    {
-      "id": 1,
-      "nom": "Festival Gnaoua",
-      "lieu": "Essaouira",
-      "date": "2025-06-15"
+      "id": "866b",
+      "nom": "ew",
+      "category": "efd",
+      "region": "fe",
+      "description": "efe",
+      "image": "https://res.cloudinary.com/dh8xcvzyi/image/upload/v1759093678/xq96y40brfpeijtdnmmf.png"
     },
     {
-      "id": 2,
-      "nom": "Moussem Tan-Tan",
-      "lieu": "Tan-Tan",
-      "date": "2025-07-10"
+      "id": "866b",
+      "nom": "ew",
+      "category": "efd",
+      "region": "fe",
+      "description": "efe",
+      "image": "https://res.cloudinary.com/dh8xcvzyi/image/upload/v1759093678/xq96y40brfpeijtdnmmf.png"
+    },
+    {
+      "id": "3072",
+      "nom": "df",
+      "category": "1",
+      "region": "srfv",
+      "image": "https://res.cloudinary.com/dh8xcvzyi/image/upload/v1759182192/xr4ibsdcszlhebcz4qyy.jpg"
+    },
+    {
+      "id": "04e7",
+      "nom": "ttx",
+      "category": "wdfef",
+      "region": "sdsz",
+      "description": "aedfc",
+      "image": "https://res.cloudinary.com/dh8xcvzyi/image/upload/v1759137983/gfjvoozzdkgfgf01eyta.jpg"
     }
   ],
-
-  "favoris": [
-    { "id": 1, "userId": 1, "oeuvreId": 1 },
-    { "id": 2, "userId": 1, "oeuvreId": 3 }
-  ],
-
   "users": [
-    { "id": 1, "nom": "Utilisateur Test", "role": "user" },
-    { "id": 2, "nom": "Admin", "role": "admin" }
+    {
+      "id": "1",
+      "nom": "Utilisateur Test",
+      "role": "user"
+    },
+    {
+      "id": "2",
+      "nom": "Admin",
+      "role": "admin"
+    }
   ]
 }

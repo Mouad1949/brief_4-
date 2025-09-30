@@ -13,8 +13,13 @@ export const OeuvresProvider = ({ children }) => {
       .catch((err) => console.error(err));
   }, []);
 
+  const addOeuvre = async (newOeuvre) =>{
+    const res = await axios.post("http://localhost:3000/oeuvres",newOeuvre);
+    setOeuvres([...oeuvres , res.data])
+  }
+
   return (
-    <OeuvresContext.Provider value={{oeuvres}}>
+    <OeuvresContext.Provider value={{oeuvres, addOeuvre}}>
       {children}
     </OeuvresContext.Provider>
   );

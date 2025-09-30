@@ -1,35 +1,35 @@
+import { useContext } from "react";
 import React from 'react'
-import artisan1 from '../../assets/artisan1.jpg';
-import artisan2 from '../../assets/artisan2.jpg';
-import artisan3 from '../../assets/artisan3.jpg';
-import artisan4 from '../../assets/artisan4.jpg';
-// import artisan5 from '../../assets/artisan5.jpg';  
+import { ArtisanContext } from "../../Context/ArtisanProvider";
+import { OeuvresContext } from "../../Context/OeuvresProvider";
+import { CategorieContext } from "../../Context/CategorieProvider";
+import { EvenementContext } from "../../Context/EvenementProvider";
 
-const items = [
-  { id: 1, titre: "evenements Fès", image: artisan1 },
-  { id: 2, titre: "evenements Rabat", image: artisan2 },
-  { id: 3, titre: "evenements Casablanca", image: artisan3 },
-  { id: 4, titre: "evenements Marrakech", image:artisan4 },
-  // { id: 5, titre: "evenements Marrakech", image:artisan5 }
-];
+
+
 function CardItem({ onModifierClick }) {
+  const { oeuvres } = useContext(OeuvresContext)
+  const {artisans} = useContext(ArtisanContext)
+  const { evenements } = useContext(EvenementContext);
+
+  const allArt = [...oeuvres,...artisans,...evenements];
   return (
     <div>
       <section>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {items.map((item) => (
+          {allArt.map((item,index) => (
             <div
-              key={item.id}
+              key={item.id || index}
               className="rounded-lg overflow-hidden shadow hover:scale-105 transition-transform duration-300"
             >
               <img
                 src={item.image}
-                alt={item.titre}
+                alt={item.nom}
                 className="w-full h-32 object-cover"
               />
               <div className="p-2">
                 <h3 className="text-[#9B3922] font-semibold m-4">
-                  {item.titre}
+                  {item.nom}
                 </h3>
               </div>
               <div className="m-4">
