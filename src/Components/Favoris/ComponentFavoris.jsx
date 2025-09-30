@@ -1,18 +1,16 @@
-import React from 'react'
-import artisan1 from '../../assets/artisan1.jpg';
-import artisan2 from '../../assets/artisan2.jpg';
-import artisan3 from '../../assets/artisan3.jpg';
-import artisan4 from '../../assets/artisan4.jpg';
-// import artisan5 from '../../assets/artisan5.jpg';  
+import React, { useContext } from 'react'
+import { FavorisContext } from '../../Context/FavorisProvider'
 
-const favoris = [
-  { id: 1, titre: "evenements Fès", image: artisan1 },
-  { id: 2, titre: "evenements Rabat", image: artisan2 },
-  { id: 3, titre: "evenements Casablanca", image: artisan3 },
-  { id: 4, titre: "evenements Marrakech", image:artisan4 },
-  // { id: 5, titre: "evenements Marrakech", image:artisan5 }
-];
+
+
+
 function ComponentFavoris() {
+
+  const {favoris ,setFavoris} = useContext(FavorisContext);
+  const handleRemove = (id) => {
+    const updated = favoris.filter((item) => item.id !== id);
+    setFavoris(updated);
+  };
   return (
     <div>
       <section className="">
@@ -38,7 +36,7 @@ function ComponentFavoris() {
               
             </div>
             <div className='m-4'>
-              <button className="inline-block cursor-pointer  rounded bg-[#9B3922] px-6 py-3 font-medium text-white shadow hover:bg-transparent hover:text-[#9B3922] border border-[#9B3922] transition">Retirer des favoris</button>
+              <button onClick={()=>handleRemove(item.id)} className="inline-block cursor-pointer  rounded bg-[#9B3922] px-6 py-3 font-medium text-white shadow hover:bg-transparent hover:text-[#9B3922] border border-[#9B3922] transition">Retirer des favoris</button>
             </div>
           </div>
           
